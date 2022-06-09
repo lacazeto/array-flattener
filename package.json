@@ -2,8 +2,7 @@
   "name": "arr-flat",
   "version": "1.0.0",
   "description": "",
-  "main": "main.ts",
-  "type": "module",
+  "main": "index.ts",
   "scripts": {
     "build": "tsc",
     "format": "prettier --check .",

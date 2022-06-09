@@ -1,5 +1,5 @@
 {
-  "moduleDirectories": ["node_modules", "src"],
+  "moduleDirectories": ["node_modules"],
   "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json"],
   "roots": ["<rootDir>/__tests__"],
   "transform": {

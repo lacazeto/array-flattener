@@ -34,14 +34,14 @@ describe("arrayFlattener", () => {
 
   it("should flatten nested arrays", () => {
     fc.assert(
-      fc.property(fc.array(fc.array(randomNonArrayArbitrary)), (randomAtOneLevelDeepArray) => {
-        expect(arrayFlattener(randomAtOneLevelDeepArray)).toEqual(randomAtOneLevelDeepArray.flat());
+      fc.property(fc.array(fc.array(randomNonArrayArbitrary)), (randomAtOneLevelNestedArray) => {
+        expect(arrayFlattener(randomAtOneLevelNestedArray)).toEqual(randomAtOneLevelNestedArray.flat());
       }),
     );
 
     fc.assert(
-      fc.property(fc.array(fc.array(fc.array(randomNonArrayArbitrary))), (randomAtTwoLevelDeepArray) => {
-        expect(arrayFlattener(randomAtTwoLevelDeepArray)).toEqual(randomAtTwoLevelDeepArray.flat().flat());
+      fc.property(fc.array(fc.array(fc.array(randomNonArrayArbitrary))), (randomAtTwoLevelsNestedArray) => {
+        expect(arrayFlattener(randomAtTwoLevelsNestedArray)).toEqual(randomAtTwoLevelsNestedArray.flat().flat());
       }),
     );
   });

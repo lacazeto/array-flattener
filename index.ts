@@ -18,6 +18,4 @@ const main = (input: unknown) => {
   return flattener(input);
 };
 
-console.log(main([1, 2, [3, 4]]));
-
 export default main;

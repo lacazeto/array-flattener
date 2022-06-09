@@ -1,21 +1,4 @@
-const isArray = (input: unknown): input is unknown[] => {
-  return Object.prototype.toString.call(input) === "[object Array]";
-};
+import arrayFlattener from "./src/array-flattener";
 
-const flattener = (arr: unknown[]) => {
-  return arr.reduce((prev: unknown[], curr): unknown[] => {
-    if (isArray(curr)) {
-      return prev.concat(flattener(curr));
-    } else {
-      return prev.concat(curr);
-    }
-  }, [] as unknown[]);
-};
-
-const main = (input: unknown) => {
-  if (!isArray(input)) throw new TypeError("Input is not an array");
-
-  return flattener(input);
-};
-
-export default main;
+const userInput = JSON.parse(process.argv.slice(2)[0] || "[]");
+console.log(arrayFlattener(userInput));

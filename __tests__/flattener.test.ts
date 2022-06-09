@@ -1,4 +1,4 @@
-import arrayFlattener from "../index";
+import arrayFlattener from "../src/array-flattener";
 import fc from "fast-check";
 
 const randomArbitrary = fc.anything({

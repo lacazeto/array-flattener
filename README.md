@@ -1,6 +1,6 @@
 ## Array flattener
 
-### Instalation
+### Installation
 
 run `npm install`
 
